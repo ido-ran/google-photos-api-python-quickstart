@@ -5,6 +5,8 @@ Creates a Photos v1 API service and prints the names and ids of the last 10 albu
 the user has access to.
 """
 from __future__ import print_function
+import os 
+import pickle
 import json
 from googleapiclient.discovery import build
 from google.auth.transport.requests import Request
