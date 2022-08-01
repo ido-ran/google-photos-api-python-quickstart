@@ -27,6 +27,7 @@ if not creds or not creds.valid:
         creds = flow.run_local_server(port = 0)
     with open("token.pickle", "wb") as tokenFile:
         pickle.dump(creds, tokenFile)
+
 # bug fix according to https://stackoverflow.com/a/67094010/5151687
 service = build('photoslibrary', 'v1', credentials = creds, static_discovery=False)
 
